@@ -1,4 +1,4 @@
-# {athfinding Visualizer
+# Pathfinding Visualizer
 
 This project was built to experiment with implementation of various pathfinding algorithms
 
