@@ -10,22 +10,21 @@
 3. If queue is empty, then goal node was not found!
 */
 
-export function BFS(grid, startNode, finishNode) {
+export function DFS(grid, startNode, finishNode) {
     const visitedNodesInOrder = [];
-    const queue =[];
+    const stack =[];
     //1. Add root node to the queue, and mark it as visited(already explored).
     startNode.isVisited = true
     visitedNodesInOrder.push(startNode)
-    queue.push(startNode);
+    stack.push(startNode);
     //2. Loop on the queue as long as it's not empty.
-    while(queue != null){
+    while(stack != null){
         //1. Get and remove the node at the top of the queue(current).
-         let i = queue.shift();
+         let i = stack.pop();
         //2. For every non-visited child of the current node, do the following:
             const UnvisitedNeighbors = getUnvisitedNeighbors(i,grid);
             for(const neighbor of UnvisitedNeighbors){
         //1. Mark it as visited.
-                
                 visitedNodesInOrder.push(neighbor)
                 neighbor.isVisited = true;
                 neighbor.previousNode = i;
@@ -35,7 +34,7 @@ export function BFS(grid, startNode, finishNode) {
                     return visitedNodesInOrder;
                 }
         //3. Otherwise, push it to the queue.
-                else queue.push(neighbor);
+                else stack.push(neighbor);
                 
         }}
 }

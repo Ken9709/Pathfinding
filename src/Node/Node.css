@@ -13,6 +13,10 @@
     background-color: green;
   }
 
-  .animate-node {
+  .node-visited{
     background-color: orange;
+  }
+
+  .node-shortest-path{
+    background-color: black;
   }
