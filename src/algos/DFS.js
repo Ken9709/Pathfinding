@@ -25,6 +25,7 @@ export function DFS(grid, startNode, finishNode) {
             const UnvisitedNeighbors = getUnvisitedNeighbors(i,grid);
             for(const neighbor of UnvisitedNeighbors){
         //1. Mark it as visited.
+                if (neighbor.isWall) continue;
                 visitedNodesInOrder.push(neighbor)
                 neighbor.isVisited = true;
                 neighbor.previousNode = i;
