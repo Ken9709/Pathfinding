@@ -3,6 +3,10 @@
     height: 25px;
     outline: 1px solid rgb(175, 216, 248);
     display: inline-block;
+    border: 1px solid black;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 20px;
   }
 
   .finish-node {
@@ -30,25 +34,27 @@
   @keyframes visitedAnimation {
     0% {
       transform: scale(0.3);
-      background-color: rgba(0, 0, 66, 0.75);
+      background-color: rgba(150, 0, 66, 1.75);
       border-radius: 100%;
     }
   
     50% {
-      background-color: rgba(17, 104, 217, 0.75);
+      transform: scale(1.2);
+      background-color: rgba(150, 150, 0, 0.95);
     }
   
     75% {
-      transform: scale(1.2);
-      background-color: rgba(0, 217, 159, 0.75);
+     
+      background-color: rgba(150, 200, 159, 0.75);
     }
   
     100% {
-      transform: scale(1);
-      background-color: rgba(0, 190, 218, 0.75);
+      transform: scale(.5);
+      background-color: rgba(156, 187, 18, 0.5);
     }
   }
   .node-shortest-path{
-    background-color: black;
+    transform: scale(.75);
+    background-color: rgb(44, 11, 161);
   }
 

@@ -57,7 +57,6 @@ function getUnvisitedNeighbors(node, grid) {
       nodesInShortestPathOrder.unshift(currentNode);
       currentNode = currentNode.previousNode;
     }
-    console.log(nodesInShortestPathOrder);
     return nodesInShortestPathOrder;
   }
 

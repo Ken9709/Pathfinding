@@ -8,7 +8,7 @@ import {AStar} from './algos/AStar';
 
 const GRID_COL_LENGTH = 30;
 const GRID_ROW_LENGTH = 30;
-const START_NODE_ROW = 2;
+let START_NODE_ROW = 2;
 const START_NODE_COL = 10;
 const FINISH_NODE_ROW = 28;
 const FINISH_NODE_COL = 29;
@@ -25,6 +25,7 @@ export default class PFVisualizer extends Component {
         const grid = getInitialGrid();
         this.setState({ grid });
     }
+    
 
     animateBFS(visitedNodesInOrder, nodesInShortestPathOrder) {
         for (let i = 0; i <= visitedNodesInOrder.length; i++) {
@@ -140,6 +141,7 @@ export default class PFVisualizer extends Component {
                 <div className="grid">
                     {grid.map((row, rowIdx) => {
                         return (
+                            
                             <div key={rowIdx}>
                                 {row.map((node, nodeIdx) => {
                                     const {

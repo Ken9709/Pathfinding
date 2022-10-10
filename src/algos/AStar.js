@@ -39,7 +39,7 @@ export function AStar(grid, startNode, finishNode) {
                     tempGisBest = true;
                 }
                 if (tempGisBest) {
-                    neighbor.parent = currentNode;
+                    neighbor.previousNode = currentNode;
                     neighbor.g = tempG;
                     neighbor.f = neighbor.g + neighbor.h;
                     openList.push(neighbor);
@@ -56,8 +56,9 @@ export function AStar(grid, startNode, finishNode) {
 function heuristic(a, b) {
     //const { col, row } = a
     let c = b.row - a.row;
-    let d = b.col - a.row;
-    let dist = Math.sqrt(c * c + d * d);
+    let d = b.col - a.col;
+    let dist = Math.sqrt((c * c )+ (d * d));
+    console.table(b.row, a.row);
     return dist;
 }
 
@@ -80,7 +81,6 @@ function getNodeWithShortestDistance(openList) {
         if (openList[i].f < openList[low].f) {
             low = i;
         }
-        console.log(low);
     }
         return openList[low];
     
