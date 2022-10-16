@@ -1,3 +1,39 @@
 .grid {
     margin: 100px 0 0;
+    
   }
+
+.header {
+  display: flex;
+  padding: 30px;
+  text-align: center;
+  background: lightblue;
+  color: gray;
+  font-size: 30px;
+  border-bottom: 10px black;
+  flex-wrap: wrap;
+ 
+}
+
+.fields{
+  align-items: flex-start;
+  flex: auto;
+  width: 100%;
+}
+
+.buttons{
+  display: flex;
+  padding: 60px;
+  text-align: center;
+  background: lightblue;
+  color: gray;
+  font-size: 15px;
+  border-bottom: 10px black;
+  margin: 0 auto;
+  column-gap: 50px;
+}
+
+.label{
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
